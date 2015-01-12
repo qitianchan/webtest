@@ -2,8 +2,10 @@ __author__ = 'qitian'
 import os
 import sys
 import web
+import app
+from core.urldeal import config_urls
 
-urls = ("/.*", "Angular")
+urls =	config_urls()
 app = web.application(urls, globals())
 
 render = web.template.render('templates', globals())
